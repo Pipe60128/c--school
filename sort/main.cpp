@@ -1,5 +1,5 @@
 #include <iostream>
-#include "busqueda.cpp"
+#include "Busqueda.cpp"
 using namespace std;
 
 // FUNCTION TO CREATE AN ARRAY BY TEH USER INPUT
@@ -15,6 +15,7 @@ int main() {
     // CASES TESTS
     /*
     */
+    cout<<"TEST CASES"<<endl;
     cout<<"------------------"<<endl;
     cout<<"lineal search"<<endl;
     int array[]={1,2,3,4,5,6,7,8};
@@ -124,7 +125,7 @@ int main() {
             cin>>sortMenu;
             if (sortMenu == 1){
                 int sortType = 0;
-                cout<<"What type of sort do you want to use?\n1(Bubble sort)\n2(Insertion sort)\n3(Merge sort)"<<endl;
+                cout<<"What type of sort do you want to use?\n1(Bubble sort)\n2(Insertion sort)\n3(Merge sort)\n4(Insercion sort)"<<endl;
                 cin>>sortType;
                 int array2[]={5,3,8,4,2};
                 int size2= sizeof(array2)/sizeof(array2[0]);
@@ -132,13 +133,18 @@ int main() {
                 Busqueda :: printArray(array2,size2);
                 if (sortType == 1){
                     cout<<"You selected bubble sort"<<endl;
-                    Busqueda :: bubbleSort(array2,size2);
+                    Busqueda :: bubbleSort(array2,size2);//bubble algorithm
                 } else if (sortType == 2){
                     cout<<"You selected insertion sort"<<endl;
-                    Busqueda :: insercionSort(array2,size2);
-                } else {
+                    Busqueda :: insertcionSort(array2,size2);//insertion algorithm
+                } else if (sortType == 3){
                     cout<<"You selected merge sort"<<endl;
-                    Busqueda :: mergeSort(array2,size2);
+                    Busqueda :: mergeSort(array2,size2);//merge algorithm
+                } else if  (sortType == 4){
+                    cout<<"You selected insercion sort"<<endl;
+                    Busqueda :: insercionSort(array2,size2);//exchange algorithm
+                } else {
+                    cout<<"Invalid option"<<endl;
                 }
                 cout<<"Array after sort"<<endl;
                 Busqueda :: printArray(array2,size2);
@@ -150,17 +156,22 @@ int main() {
                 cout<<"Array before sort"<<endl;
                 Busqueda :: printArray(array2,n);
                 int sortType = 0;
-                cout<<"What type of sort do you want to use?\n1(Bubble sort)\n2(Insertion sort)\n3(Merge sort)"<<endl;
+                cout<<"What type of sort do you want to use?\n1(Bubble sort)\n2(Insertion sort)\n3(Merge sort)\n4(Insercion sort)"<<endl;
                 cin>>sortType;
                 if (sortType == 1){
                     cout<<"You selected bubble sort"<<endl;
-                    Busqueda :: bubbleSort(array2,n);
+                    Busqueda :: bubbleSort(array2,n);//bubble algorithm
                 } else if (sortType == 2){
                     cout<<"You selected insertion sort"<<endl;
-                    Busqueda :: insercionSort(array2,n);
-                } else {
+                    Busqueda :: insertcionSort(array2,n);//insertion algorithm
+                } else if (sortType == 3){
                     cout<<"You selected merge sort"<<endl;
-                    Busqueda :: mergeSort(array2,n);
+                    Busqueda :: mergeSort(array2,n); //merge algorithm
+                } else if  (sortType == 4){
+                    cout<<"You selected insercion sort"<<endl;
+                    Busqueda :: insercionSort(array2,n); //exchange algorithm
+                } else {
+                    cout<<"Invalid option"<<endl;
                 }
                 cout<<"Array after sort"<<endl;
                 Busqueda :: printArray(array2,n);
